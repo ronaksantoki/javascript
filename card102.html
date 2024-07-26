@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="text1" placeholder="enter your name">
+    <button onclick="vs()">click</button>
+    <div id="result"></div>
+    <script>
+        function vs(){
+
+            var b = document.getElementById('text1').value;
+            var a = document.getElementById('result');
+     
+            a.textContent = (`RADHE RADHE ${b}`);
+        }
+    </script>
+</body>
+</html>

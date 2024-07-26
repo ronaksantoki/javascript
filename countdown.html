@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    days:<input type="number" name="" id="days"><br><br>
+    hours:<input type="number" name="" id="hours"><br><br>
+    min: <input type="number" id="min"><br><br>
+    second <input type="number" id="second"><br><br>
+
+    <script>
+        var ips = document.getElementsByTagName("input");
+        function vs(){
+            const enddate = "20 nov 2024 12:00 am";
+
+            const end = new Date(enddate);
+            const curr = new Date();
+            const diff = end - curr;
+
+            ips[0].value = Math.floor(diff/(24*60*60*1000)%365);
+            ips[1].value = Math.floor(diff/(60*60*1000)%24);
+            ips[2].value = Math.floor(diff/(60*1000)%60);
+            ips[3].value = Math.floor(diff/(1000)%60);
+        }
+        vs();
+        setInterval(vs,1000)
+    </script>
+</body>
+</html>

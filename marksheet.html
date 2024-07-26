@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="num1">
+    <input type="number" name="" id="num2">
+    <input type="number" name="" id="num3">
+    <input type="number" name="" id="num4">
+    <input type="number" name="" id="totnum">
+    <button onclick="vs()">click for result</button>
+    <div id="res"></div>
+
+    <script>
+
+        function vs(){
+            var num = parseInt(document.getElementById('num').value);
+            var res = document.getElementById ('res');
+            
+            if (num >= 80){
+                res.textContent = "you have A grade";
+            }
+            else if (num >= 60){
+                res.textContent = "you have B grade";
+            }
+            else if (num >= 33){
+                res.textContent = "you have C grade";
+            }
+            else{
+                res.textContent = "you are FAIL better luck next time";
+            }
+        }
+
+    </script>
+</body>
+</html>

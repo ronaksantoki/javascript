@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>stone papper sec</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            transition: .2s;
+        }
+
+        body {
+            background-color: lightgreen;
+
+
+        }
+
+        .con {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            min-height: 100vh;
+
+        }
+
+        button {
+            width: 70px;
+            cursor: pointer;
+            border: none;
+            box-shadow: 2px 2px 2px black;
+            border-radius: 50%;
+            overflow: hidden;
+            height: 70px;
+
+        }
+
+        img {
+            width: 150%;
+        }
+
+        h3 {
+            text-align: center;
+            color: darkred;
+            /* border: 2px dashed white; */
+            position: absolute;
+            top: 20px;
+            left: 30px;
+        }
+
+        h2 {
+            color: darkred;
+            /* border: 2px dashed white; */
+            position: absolute;
+            bottom: 20px;
+            left: 120px;
+            text-align: center;
+            font-size: 17px;
+        }
+
+        button:hover {
+            box-shadow: 0px 0px 0px;
+            border: 1px dashed darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>STONE PAPER & SCISSORS GAME</h3>
+    <div class="con">
+
+
+        <button onclick="vs('stone')">
+            <img src="https://facts.net/wp-content/uploads/2020/11/hand-2704013_1280.jpg" alt="">
+        </button>
+        <button onclick="vs('paper')">
+            <img src="https://as2.ftcdn.net/v2/jpg/02/43/06/89/1000_F_243068964_BqrpjOdMd2U7ZEGLjiO8l7h4Ut1j9hcA.jpg"
+                alt="">
+        </button>
+        <button onclick="vs('scissors')">
+            <img src="https://webstockreview.net/images/cigarette-clipart-hand-holding-6.png" alt="">
+        </button>
+    </div>
+
+    <h2 id="result"></h2>
+
+
+    <script>
+        function vs(r_p) {
+            var result = document.getElementById('result');
+
+            var randnum = Math.random();
+
+            var cc;
+
+            if (randnum > .6) {
+                cc = "stone";
+            }
+
+            else if (randnum > .3) {
+                cc = "paper";
+            }
+
+            else {
+                cc = "scissors";
+            }
+
+
+            // result.textContent  = cc;
+
+            if (r_p === cc) {
+                result.textContent = "match tie.."
+                result.style.backgroundColor = "darkcyan"
+                result.style.padding = "3px"
+                result.style.borderRadius = "10px"
+
+                result.style.color = "white"
+                result.style.left = "150px"
+
+
+            }
+
+            else if (
+                (r_p === "stone" && cc === "scissors") ||
+                (r_p === "paper" && cc === "stone") ||
+                (r_p === "scissors" && cc === "paper"
+                )) {
+                result.textContent = "You are win...congrats.."
+                result.style.backgroundColor = "darkgreen"
+                result.style.padding = "3px"
+                result.style.borderRadius = "10px"
+
+                result.style.color = "white"
+                result.style.left = "100px"
+            }
+
+            else {
+                result.textContent = "you are lose, Better Luck Next time..";
+                result.style.backgroundColor = "darkred"
+                result.style.padding = "3px"
+                result.style.borderRadius = "10px"
+                result.style.fontSize = "10px"
+
+                result.style.color = "white"
+                result.style.left = "100px"
+            }
+
+        }
+    </script>
+</body>
+
+</html>

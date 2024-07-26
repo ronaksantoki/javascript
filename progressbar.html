@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            transition: 1s;
+        }
+        #box{
+            height: 200px;
+            width: 100%;
+            background-color: skyblue;
+        }
+        #container{
+            height: 100%;
+            width: 20%;
+            background-color: darkblue;
+        }
+        button{
+            padding: 10px;
+            margin: 50px;
+            margin-left: 700px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="container"></div>
+    </div>
+    <button onclick="vs()" ondblclick="sv()">click here</button>
+    <script>
+        function vs(){
+            var container = document.getElementById('container');
+
+            container.style.width = "100%";
+        }
+
+        function sv(){
+            var container = document.getElementById('container');
+            container.style.width = "30%";
+        }
+    </script>
+</body>
+</html>

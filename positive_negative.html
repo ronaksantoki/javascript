@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" name="" id="num1">
+    <div id="res"></div>
+    <button onclick="vs()">click</button>
+    <script>
+        function vs() {
+            var num1 = parseInt(document.getElementById('num1').value);
+            var res = document.getElementById('res');
+            if (num1 > 0) {
+                res.textContent = "number is positive";
+            }
+            else if(num1 < 0){
+                res.textContent = "number is negative";
+            }
+           else {
+                res.textContent = "number is zero";
+            }
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

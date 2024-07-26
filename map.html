@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const map= new Map();
+        map.set('name1','ronak');
+        map.set('name','prince');
+        map.set('salary1',500000);
+        map.set('salary2',600000);
+
+        console.log(map.get('name1'));
+        console.log(map.get('name'));
+       console.log(map.get('salary1'));
+       console.log(map.get('salary2'));
+
+        console.log(map.size);
+        console.log(map);
+
+        for (let [property, value] of map) {
+        console.log(`${property}: ${value}`);
+
+        }
+    map.forEach((value, key) => {
+    console.log(`${key}: ${value}`);
+
+    console.log(map.has('name'));
+});
+map.delete('name');
+
+console.log(map)
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="text">
+    <button onclick="vs()">search</button>
+    <ul id="filter">
+        <li>Rohit sharma</li>
+        <li>Ro super-hitmen sharma</li>
+        <li>captain rohit </li>
+        <li>ronak</li>
+        <li>virat kohli</li>
+        <li>Jatt Prabhjot</li>
+    </ul>
+
+    <script>
+
+        function vs(){
+            var txt = document.getElementById('text');
+
+            var fi = txt.value.toUpperCase();
+
+            var ul = document.getElementById('filter');
+            var li  = ul.getElementsByTagName('li');
+
+            for(let i = 0; i<li.length; i++){
+                var newlist = li[i].textContent;
+
+                if(newlist.toUpperCase().indexOf(fi) > -1){
+                    li[i].style.display = 'block';
+                }
+                else{
+                li[i].style.display = 'none';
+            }
+            }
+        }
+    </script>
+</body>
+</html>

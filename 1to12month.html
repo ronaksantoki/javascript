@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" name="" id="num1">
+    <div id="res"></div>
+    <button onclick="vs()">click here</button>
+
+    <script>
+
+        function vs(){
+            var num1 = parseInt(document.getElementById('num1').value);
+            var res = document.getElementById('res');
+
+            if (num1 === 1) {
+                res.textContent = "kartak && january";
+            }
+            else if (num1 === 2) {
+                res.textContent = "magasar && febuary";
+            }
+            else if (num1 === 3) {
+                res.textContent = "posh && march";
+            }
+            else if (num1 === 4) {
+                res.textContent = "maha && april";
+            }
+            else if (num1 === 5) {
+                res.textContent = "fagan && may";
+            }
+            else if (num1 === 6) {
+                res.textContent = "chaitr && june";
+            }
+            else if (num1 === 7) {
+                res.textContent = "vaishakh && july";
+            }
+            else if (num1 === 8) {
+                res.textContent = "jeth && augest";
+            }
+            else if (num1 === 9) {
+                res.textContent = "ashadh && september";
+            }
+            else if (num1 === 10) {
+                res.textContent = "shravan && octomber";
+            }
+            else if (num1 === 11) {
+                res.textContent = "bhadarvo && november";
+            }
+            else if (num1 === 12){  
+                 res.textContent = "asho && december";
+            }
+            else{
+                res.textContent ="only 12 months are available";
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>

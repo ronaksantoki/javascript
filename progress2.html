@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>dice making today..</title>
+</head>
+<body>
+    <div id="result"></div>
+    <button onclick="vs()">TRY YOUR LUCK</button>
+
+
+    <script>
+        function vs(){
+            var result = document.getElementById('result');
+
+            // result.textContent = "veer sir are here."
+
+            var randnum = Math.floor( Math.random() *6 +1);
+
+            result.textContent = randnum;
+        }
+    </script>
+</body>
+</html>

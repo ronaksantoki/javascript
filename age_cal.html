@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="date" id="date">
+    <div id="res"></div>
+    <button onclick="vs()">click here</button>
+    <script>
+       function vs(){
+        var date = document.getElementById('date');
+        var result = document.getElementById('res');
+
+        var birthdate = new Date(date.value);
+
+        var currentdate = new Date;
+
+        var agecal = currentdate - birthdate;
+        var ageyear =Math.floor(agecal/(365*24*60*60*1000));
+        result.textContent = ageyear;
+        }
+         vs();
+    </script>
+</body>
+</html>

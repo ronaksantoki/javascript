@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        transition: 2s;
+    }
+    #container{
+        padding: 50px;
+        background-color: azure;
+    }
+    a{
+        /* padding-left:20px; */
+        padding: 10px;
+        text-decoration: none;
+        font-size: 1.5rem;
+    }
+
+    #Light{
+        position: absolute;
+        right: 30px;
+        padding: 20px;
+        top: 30px;
+        background-color: white;
+        border: none;
+        border-radius: 20px;
+    
+    }
+    #dark{
+        position: absolute;
+        right: 150px;
+        padding:20px ;
+        top: 30px;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 20px;
+    }
+    
+   </style>
+</head>
+<body id="hh">
+    <div id="container">
+      <nav id="a1">
+          <a href="" id="e">Home</a>
+          <a href="" id="e">about</a>
+          <a href="" id="e"> contact</a>
+          <a href="" id="e">service</a>
+            
+            <button onclick="vs()" id="Light">Light</button>
+            <button onclick="sv()" id="dark">Black</button>  
+        </nav> 
+    </div>
+
+    <script>
+         function vs(){
+            var ronak = document.getElementById('container');
+            var nav = document.getElementById('a1');
+            var hh = document.getElementById('hh');
+     
+            ronak.style.backgroundColor = 'skyblue';
+           
+        
+            hh.style.backgroundColor = "lightblue";
+           
+            
+         }
+
+         function sv(){
+            var ronak = document.getElementById('container');
+            var nav = document.getElementById('a1');
+            var hh = document.getElementById('hh');
+            ronak.style.backgroundColor = 'grey';
+            hh.style.backgroundColor = 'black';
+         }
+    </script>
+</body>
+</html>

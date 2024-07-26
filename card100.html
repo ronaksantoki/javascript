@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        form{
+            height: 200px;
+            width: 200px;
+            background-color: lightblue;
+            border-radius: 20px;
+           
+        }
+        input[type="number"]{
+            padding:10px;
+            margin: 20px;
+            border-radius: 20px;
+            border: none;
+        }
+        button{
+            margin-left: 60px;
+            border-radius: 20px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="number" name="" id="inp1" placeholder="enter first number">
+        <input type="number" name="" id="inp2" placeholder="enter second number">
+        <button onclick="sum()">click for sum</button>
+    </form>
+    <script>
+        function sum(){
+            var inp1 =  parseInt( document.getElementById('inp1').value);
+            var inp2 = parseInt( document.getElementById('inp2').value);
+
+            var sum = inp1 + inp2;
+            var sub = inp1 - inp2;
+            var mul = inp1 * inp2;
+            var div = inp1 / inp2;
+            alert(`sum of the ${inp1} + ${inp2} is ${sum}`);
+            alert(`sub of the ${inp1} - ${inp2} is ${sub}`);
+            alert(`sum of the ${inp1} * ${inp2} is ${mul}`);
+            alert(`sub of the ${inp1} / ${inp2} is ${div}`);
+            
+
+        }
+    </script>
+</body>
+</html>

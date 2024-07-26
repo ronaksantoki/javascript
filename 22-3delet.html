@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Visually Striking Sections</title>
+  <style>
+    .mytitle {
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s ease;
+    }
+
+    .mytitle:hover {
+      background-color: #ddd;
+    }
+
+    .panel {
+      display: none;
+      padding: 10px;
+      margin: 5px;
+      background-color: #fafafa;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="mytitle" onclick="vs(0)">Visually Striking Section 1</div>
+  <div class="panel">
+    Exquisite Content of Section 1
+  </div>
+
+  <div class="mytitle" onclick="vs(1)">Visually Striking Section 2</div>
+  <div class="panel">
+    Splendid Content of Section 2
+  </div>
+
+  <div class="mytitle" onclick="vs(2)">Visually Striking Section 3</div>
+  <div class="panel">
+    Elegant Content of Section 3
+  </div>
+
+  <div id="demo"></div>
+
+  <script>
+    function vs(index) {
+      var mytitle = document.getElementsByClassName('mytitle')[index];
+      var panel = mytitle.nextElementSibling;
+
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    }
+  </script>
+</body>
+
+</html>

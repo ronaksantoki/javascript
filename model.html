@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        #model{
+            height: 500px;
+            width: 500px;
+            background-color: lightblue;
+            display: none;
+            
+        }
+        #close{
+            float: right;
+            font-size: 60px;
+            cursor: pointer;
+            display: block;
+            
+        }
+        h1{
+            font-size: 40px;
+            position: absolute;
+            left: 600px;
+            top: 300px;
+            
+        }
+        button{
+            padding: 10px;
+            background-color: darkcyan;
+            border: none;
+            border-radius: 20px;
+            position: absolute;
+            left: 660px;
+            top: 400px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="vs()">click here</button>
+    <div id="model">
+        <div id="close" onclick="sv()">&times;</div>
+        <h1>Radhe Radhe</h1>
+    </div>
+    <script>
+        function vs(){
+            var model = document.getElementById('model');
+
+            var clode = document.getElementById('close');
+
+            model.style.display = "block";
+        }
+            function sv(){
+                var model = document.getElementById('model');
+
+                var clode = document.getElementById('close');
+
+            model.style.display = "none";
+            }
+        
+    </script>
+</body>
+</html>

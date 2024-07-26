@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
+        }
+        .manu{
+            background-color: black;
+            padding: 20px;
+            color: white;
+            
+        }
+        button{
+            margin-left: 30px;
+            color: white;
+            background-color: black;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .ronak{
+            display: none;
+            font-style: italic;
+            background-color: blanchedalmond;
+
+        }
+        h2{
+            font-size: x-large;
+            text-align: center;
+            color: rebeccapurple;
+        }
+        p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        
+       
+       
+    </style>
+</head>
+
+<body>
+    <div class="manu">
+    <button onclick="vs('graphic')">graphic</button>
+    <button onclick="vs('AI')">AI</button>
+    <button onclick="vs('Developing')">Developing</button>
+    <button onclick="vs('fullstack')">full stack development</button>
+    <button onclick="vs('Developing1')">2D/3D developing</button>
+    <button onclick="vs('Web')">Web developing</button>
+</div>
+
+    <div id="graphic" class="ronak">
+        <h2>graphic</h2>
+        <p>This course covers topics such as graphic design principles, Adobe Photoshop, Adobe Illustrator, and other
+            graphic design tools.</p>
+    </div>
+<br><br>
+    <div id="AI" class="ronak">
+        <h2>AI</h2>
+        <P>Artificial intelligence (AI), in its broadest sense, is intelligence exhibited by machines, particularly
+            computer systems, as opposed to the natural intelligence of living beings. As a field of research in
+            computer science focusing on the automation of intelligent behavior through machine learning, it develops
+            and studies methods and software which enable machines to perceive their environment and take actions that
+            maximize their chances of achieving defined goals, with the aim of performing tasks typically associated
+            with human intelligence. Such machines may be called AIs.</P>
+    </div>
+    <br><br>
+    <div id="Developing" class="ronak">
+        <h2>Developing</h2>
+        <p>This course is for aspiring developers and covers programming languages like HTML, CSS, JavaScript, Python,
+            and more</p>
+    </div>
+    <br><br>
+    <div id="fullstack" class="ronak">
+        <h2>Full stack development</h2>
+        <p>Full Stack Development refers to the development of both front end(client side) and back end(server side)
+            portions of web application.Full stack web developers have the ability to design complete web applications
+            and
+            websites. They work on the frontend, backend, database and debugging of web applications or websites.</p>
+    </div>
+    <br><br>
+    <div id="Developing1" class="ronak">
+        <h2>2d/3D developing</h2>
+        <p>The course then dives into developing your first 2D and 3D games. You will discover how to set your games
+            apart from the crowd by polishing them with Unity’s latest features, including post-processing effects and
+            the animation system.
+        </p>
+    </div>
+    <br><br>
+
+    <div id="Web" class="ronak">
+    <h2>web developing</h2>
+    <p>While their primary role is to ensure the website is visually appealing and easy to navigate, many web
+        developers are also responsible for the website’s performance and capacity. Web developers usually fall
+        under one of three categories: back-end developers, front-end developers, and full-stack developers.</p>
+        </div>
+        
+
+<script>
+    function vs(course) {
+        var ronak = document.getElementsByClassName('ronak');
+        for (i = 0; i < ronak.length; i++) {
+            ronak[i].style.display = "none";
+        }
+        document.getElementById(course).style.display = "block";
+    }
+</script>
+</body>
+
+</html>

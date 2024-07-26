@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+       
+        #a1{
+            height: 100px;
+            width: 100%;
+            background-color: blueviolet;
+            border: none;
+            border-radius: 20px;
+            
+          
+        }
+        #inner{
+            height: 100px;
+            width: 100px;
+            background-color: brown;
+            transition: 2s;
+            color: black;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            text-transform: uppercase;
+            color: white;
+           
+            
+        }
+        button{
+            height: 100px;
+            width: 150px;
+            text-align: center;
+            background-color: navajowhite;
+            margin:100px 700px;
+            border: none;
+            font-size: xx-large;
+            cursor: pointer;
+
+        }
+
+        h1{
+            opacity: 0;
+            color: black;
+        }
+        
+        button:hover h1{
+            opacity: 1;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="a1">
+        <div id="inner">
+            <!-- <h1 id="ii">Radhe Radhe</h1> -->
+        </div>
+       
+    </div>
+
+    <button onclick="vs()" ondblclick="rp()" >click me</button>
+
+    <script>
+        function vs(){
+           var p = document.getElementById('inner');
+            p.style.width = "100%";
+            p.style.backgroundColor = "brown";
+            p.style.borderRadius = "20px";
+            p.style.opacity = "1";
+
+            p.textContent = "Radhe Radhe"
+        }
+
+        function rp(){
+            var p = document.getElementById('inner');
+            p.style.width ="0px";
+            p.style.backgroundColor = "brown";
+            p.style.borderRadius = "20px";
+            p.textContent = "Radhe Radhe";
+        }
+
+       
+      
+    </script>
+</body>
+</html>

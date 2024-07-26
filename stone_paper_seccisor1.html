@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+         
+        }
+        body{
+            background-color: sandybrown;
+        }
+        button{
+            margin: 100px;
+            height: 50px;
+            width: 100px;
+            border: none;
+            background-color: skyblue;
+            border-radius: 20px;
+            font-size: 1rem;
+        }
+        #result{
+            position: absolute;
+          bottom: 250px;
+          left: 700px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="vs('stone')">stone</button>
+        <button onclick="vs('paper')">paper</button>
+        <button onclick="vs('seccisor')">seccisor</button>
+    </div>
+    <div id="result"></div>
+
+    <script>
+        function vs(r_p){
+            var result = document.getElementById("result");
+            var renum = Math.random();
+
+            var cc;
+
+            if(renum > 0.6){
+                cc = "stone";
+            }
+
+            else if(renum >0.3){
+                cc="paper";
+            }
+            else{
+                cc = "seccisor"
+            }
+
+            if(r_p === cc){
+                result.textContent = "match ties";
+            }
+            else if ((r_p === "stone" && cc === "seccisor")||
+             (r_p === "seccisor" && cc === "paper")||
+             (r_p === "paper" && cc === "stone")){
+                result.textContent = "you won the match";
+                result.style.backgroundColor = "green";
+
+             }
+
+             else{
+                result.textContent = "you loss the match";
+                result.style.backgroundColor = "red";
+             }
+
+            }
+        
+    </script>
+</body>
+</html>

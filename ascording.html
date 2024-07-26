@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .panel{
+            display:none;
+            margin: 20px;
+            padding: 20px;
+            font-style: italic;
+            background-color: lightblue;
+            
+        }
+        .title{
+            padding: 20px;
+            /* margin: 10px; */
+            margin-top: 10px;
+            width: 100%;
+            border-radius: 20px;
+            border: none;
+            
+            background-color: lightpink;
+            cursor: pointer;
+            /* justify-content: center;
+            align-items: center;
+           flex-direction: column; */   
+        }
+     
+
+
+    </style>
+
+
+</head>
+<body>
+    <button class="title" onclick="vs(0)">Jatt prabhjot</button>
+    <div class="panel">
+        <p>Jatt Prabhjot is an Indian YouTuber, moto vlogger, and Software Engineer. In 2022, he made headlines after he met with an accident due to overspeeding his bike in Nepal. Jatt Prabhjot Singh was born on Wednesday, 9 December 1992 ( age 30 years; as of 2022) in New Delhi, India.</p>
+    </div>
+
+    <button class="title" onclick="vs(1)">Rohit Sharma</button>
+    <div class="panel">
+        <p>Rohit Gurunath Sharma (born 30 April 1987) is an Indian international cricketer who currently captains the India national cricket team across all formats. He is a right-handed batsman. Considered one of the best batsmen of his generation and one of the greatest opening batters of all time,[3] Sharma is known for his timing, elegance, six-hitting abilities and leadership skills. Sharma holds several batting records which famously include most sixes in international cricket,[a] most double centuries in ODI cricket (3), most centuries at Cricket World Cups (7) and joint most hundreds in Twenty20 Internationals (5). Rohit Sharma is the first player to score 5 T20I centuries.[5] He plays for Mumbai Indians in IPL and for Mumbai in domestic cricket.</p>
+    </div>
+
+    <button class="title" onclick="vs(2)">Virat kohli</button>
+    <div class="panel">
+        <p>Kohli, who took a two-month paternity break, didn't forget to mention that whether it is cricket in the Olympic program or T20 World Cup in the USA, he is 'The Face'. In 378 appearances in T20s, Virat has scored 12,092 runs at an average of 41.26, with eight centuries and 92 fifties. His best score is 122*.
+        </p>
+    </div>
+
+    <button class="title" onclick="vs(3)">Suryakumar Yadav</button>
+    <div class="panel">
+        <p>Suryakumar Yadav (born 14 September 1990) is an Indian international cricketer. He plays as a right-handed middle-order batter and is an occasional right-arm off break bowler. He represents the Indian cricket team and plays for Mumbai in domestic first-class cricket. Suryakumar was a member of the Indian team that finished runners-up in the 2023 ICC Cricket World Cup. He plays for Mumbai Indians in the Indian Premier League (IPL).</p>
+    </div>
+
+    <script>
+        function vs(index){
+            var a = document.getElementsByClassName('title')[index];
+       var panel = a.nextElementSibling;
+
+            if(panel.style.display === 'block'){
+                panel.style.display = 'none';
+            }
+            else{
+                panel.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

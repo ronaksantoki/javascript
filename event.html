@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #a1{
+            color: blueviolet;
+            font-size: xx-large;
+        }
+        button{
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+        }
+        #v1{
+            color: indianred;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <div id="a1">
+       
+    </div>
+    <button onclick="c()">click me</button><br><br>
+
+
+    <div id="v1"></div>
+    <button onclick="v()">click me</button>
+
+    <div id="h1"></div>
+    <button onclick="h()">click me</button>
+    
+    
+    <script>
+        function c(){
+        var a = document.getElementById('a1');
+        a.textContent = " hello sir,Good morning";
+        }
+
+        function v(){
+            var p =document.getElementById('v1');
+            p.textContent = "hello Good morning";
+        }
+
+        function h(){
+            var x = document.getElementById('h1');
+            x.textContent = "ronak";
+        }
+    </script>
+</body>
+</html>

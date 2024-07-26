@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+           
+        }
+        button{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(252, 176, 176);
+            font-size: larger;
+            border: none;
+            cursor: pointer;
+            text-transform: capitalize;
+            transition: 2s;
+          
+        }
+
+        button:hover{
+            background-color: indianred;
+        }
+
+        #dies{
+            height: 50px;
+            width: 100px;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: xx-large;
+            cursor: pointer;
+            color: white;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="dies"></div>
+    <button onclick="fun()">click</button>
+
+    <script>
+        function fun(){
+            var a = document.getElementById('dies');
+            var b =Math.floor(Math.random() * 6 + 1);
+            var c = Math.floor(Math.random() * 6 + 1);
+            var d = b + c;
+            confirm(`${b} + ${c} = ${d}`)
+            // a.textContent = b + c ;
+           
+        }
+    </script>
+</body>
+</html>

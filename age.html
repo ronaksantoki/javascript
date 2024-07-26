@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="num1">
+    <div id="res"></div>
+    <button onclick="vs()">click</button>
+
+    <script>
+
+        function vs(){
+            var num1 = parseInt(document.getElementById('num1').value);
+            var res = document.getElementById ('res');
+
+            if (num1 > 18){
+                res.textContent = "you are now senior you can vote";
+            }
+            else{
+                res.textContent = "you are now junior you can't vote";
+            }
+        }
+        
+    </script>
+</body>
+</html>

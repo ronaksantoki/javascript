@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Filter</title>
+</head>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-direction: column;
+
+        background: linear-gradient(to right , red ,yellow , rebeccapurple , orange);
+       
+    }
+    ul{
+        margin: 10px;
+    }
+
+    button{
+        margin: 10px;
+        height: 20px;
+        width: 60px;
+        color: indigo;
+        background-color: indianred;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    input{
+      
+        border-bottom: 3px inset rebeccapurple;
+        border-radius: 20px;
+        padding: 5px;
+        width: 200px;
+    }
+   
+</style>
+
+<body>
+    <input type="text" name="" id="txt">
+    <button onclick="vs()">Click</button>
+    <ul id="filter">
+        <li>Rohit Sharma</li>
+        <li>ronakkumar</li>
+        <li>prince</li>
+        <li>salmankhan</li>
+        <li>Virat Kohli</li>
+        <li>Dhoni</li>
+    </ul>
+
+
+
+    <script>
+        
+        function vs() {
+            var txt = document.getElementById('txt');
+
+            var filter = txt.value.toUpperCase();
+
+            var ul = document.getElementById('filter');
+            var li = document.getElementsByTagName('li');
+
+            
+
+            for(let i = 0; i< li.length; i++){
+                
+
+                var myvalue = li[i].textContent;
+
+                if(myvalue.toUpperCase().indexOf(filter) > -1 ){
+                    li[i].style.display = "block";
+                }
+                
+                else{
+                    li[i].style.display = "none";
+                
+                }
+            }
+        }
+    </script>
+</body>
+
+
+</html>

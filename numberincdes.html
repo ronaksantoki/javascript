@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="des">-</div>
+    <div id="con">0</div>
+    <div id="inc">+</div>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            var des = document.getElementById('des');
+            var con = document.getElementById('con');
+            var inc = document.getElementById('inc');
+
+            let ronak = 0;
+            function vs(){
+                con.textContent = ronak;
+            }
+            des.addEventListener('click',function(){
+                ronak--;
+                vs();
+            })
+            inc.addEventListener('click',function(){
+                ronak++;
+                vs();
+            })
+        })
+    </script>
+</body>
+</html>

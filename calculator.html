@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>sum</h2>
+    <h2>sub</h2>
+    <h2>mul</h2>
+    <h2>div</h2>
+
+    <input type="number" name="" id="check" placeholder="please enter only 1 to 4 number">
+
+    <input type="number" name="" id="num1" placeholder="enter number1">
+    <input type="number" name="" id="num2" placeholder="enter number2">
+
+    <div id="result"></div>
+
+    <button onclick="vs()">let's do it</button>
+
+
+    <script>
+
+        function vs(){
+            var check = parseInt(document.getElementById('check').value);
+            var num1 = parseInt(document.getElementById('num1').value);
+            var num2 = parseInt (document.getElementById('num2').value);
+            var result = document.getElementById('result');
+
+            if (check === 1){
+                result.textContent = num1 + num2;
+            }
+            else if (check === 2){
+                result.textContent = num1 - num2;
+            }
+            else if (check === 3){
+                result.textContent = num1 * num2;
+            }
+            else if (check === 4){
+                result.textContent = num1 / num2;
+            }
+            else{
+                result.textContent = "please enter 1 to 4 number";
+            }
+        }
+
+    </script>
+</body>
+</html>
